@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Infinity Integers</title>
+</head>
+<body>
+
+<h1>Infinity Integers</h1>
+<p>Solve the math problem!</p>
+
+<div id="question"></div>
+<input type="number" id="answer" placeholder="Your answer">
+<button onclick="checkAnswer()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+let num1 = Math.floor(Math.random()*10);
+let num2 = Math.floor(Math.random()*10);
+let correct = num1 + num2;
+
+document.getElementById("question").innerHTML = num1 + " + " + num2 + " = ?";
+
+function checkAnswer(){
+let user = document.getElementById("answer").value;
+if(user == correct){
+document.getElementById("result").innerHTML = "Correct!";
+}else{
+document.getElementById("result").innerHTML = "Try Again!";
+}
+}
+</script>
+
+</body>
+</html>
